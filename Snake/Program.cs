@@ -7,7 +7,7 @@ namespace Snake
   {
     public static void Main(string[] args)
     {
-      var wGame = new MenuItem()
+      var wGame = new Game()
       {
         Title = "Game"
       };
