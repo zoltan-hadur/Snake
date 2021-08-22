@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Snake
 {
@@ -6,7 +7,31 @@ namespace Snake
   {
     public static void Main(string[] args)
     {
-      Console.WriteLine("Hello World!");
+      var wGame = new MenuItem()
+      {
+        Title = "Game"
+      };
+
+      var wHighScores = new MenuItem()
+      {
+        Title = "High Scores"
+      };
+
+      var wSettings = new MenuItem()
+      {
+        Title = "Settings"
+      };
+
+      var wMainMenu = new MenuItem()
+      {
+        Title = "Main Menu"
+      };
+      wMainMenu.AddSubMenuItem(wGame);
+      wMainMenu.AddSubMenuItem(wHighScores);
+      wMainMenu.AddSubMenuItem(wSettings);
+
+      Console.CursorVisible = false;
+      wMainMenu.Run();
     }
   }
 }
